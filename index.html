@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Visa Application Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-passport"></i>
+                    <span>VisaPortal</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#apply">Apply</a></li>
+                    <li><a href="#track">Track</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Apply for Your Visa Anywhere in the World</h1>
+                <p>Simple, fast, and secure visa application process for countries worldwide</p>
+                <button class="cta-button" onclick="scrollToSection('apply')">Start Application</button>
+            </div>
+        </section>
+
+        <section id="apply" class="application-section">
+            <div class="container">
+                <h2>Visa Application Form</h2>
+                <div class="progress-bar">
+                    <div class="progress-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Personal Info</span>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Travel Details</span>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Documents</span>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <span class="step-number">4</span>
+                        <span class="step-title">Review</span>
+                    </div>
+                </div>
+
+                <form id="visaForm" class="visa-form">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Personal Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth *</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nationality">Nationality *</label>
+                                <select id="nationality" name="nationality" required>
+                                    <option value="">Select Nationality</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="IN">India</option>
+                                    <option value="CN">China</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="ES">Spain</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="RU">Russia</option>
+                                    <option value="SA">Saudi Arabia</option>
+                                    <option value="OTHER">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="passportNumber">Passport Number *</label>
+                                <input type="text" id="passportNumber" name="passportNumber" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passportExpiry">Passport Expiry Date *</label>
+                                <input type="date" id="passportExpiry" name="passportExpiry" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Travel Details -->
+                    <div class="form-step" data-step="2">
+                        <h3>Travel Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="destinationCountry">Destination Country *</label>
+                                <select id="destinationCountry" name="destinationCountry" required>
+                                    <option value="">Select Destination</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="IN">India</option>
+                                    <option value="CN">China</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="ES">Spain</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="RU">Russia</option>
+                                    <option value="SA">Saudi Arabia</option>
+                                    <option value="OTHER">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="visaType">Visa Type *</label>
+                                <select id="visaType" name="visaType" required>
+                                    <option value="">Select Visa Type</option>
+                                    <option value="tourist">Tourist Visa</option>
+                                    <option value="business">Business Visa</option>
+                                    <option value="student">Student Visa</option>
+                                    <option value="work">Work Visa</option>
+                                    <option value="transit">Transit Visa</option>
+                                    <option value="medical">Medical Visa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="departureDate">Departure Date *</label>
+                                <input type="date" id="departureDate" name="departureDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="returnDate">Return Date *</label>
+                                <input type="date" id="returnDate" name="returnDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="purpose">Purpose of Visit *</label>
+                                <textarea id="purpose" name="purpose" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Documents -->
+                    <div class="form-step" data-step="3">
+                        <h3>Document Upload</h3>
+                        <div class="upload-section">
+                            <div class="upload-group">
+                                <label for="passportCopy">Passport Copy *</label>
+                                <div class="file-upload">
+                                    <input type="file" id="passportCopy" name="passportCopy" accept="image/*,.pdf" required>
+                                    <div class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Click to upload or drag and drop</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upload-group">
+                                <label for="photo">Passport Size Photo *</label>
+                                <div class="file-upload">
+                                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                                    <div class="file-upload-label">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Click to upload or drag and drop</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upload-group">
+                                <label for="additionalDocs">Additional Documents</label>
+                                <div class="file-upload">
+                                    <input type="file" id="additionalDocs" name="additionalDocs" accept="image/*,.pdf" multiple>
+                                    <div class="file-upload-label">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span>Click to upload or drag and drop</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review -->
+                    <div class="form-step" data-step="4">
+                        <h3>Review Application</h3>
+                        <div class="review-section">
+                            <div class="review-item">
+                                <h4>Personal Information</h4>
+                                <div id="reviewPersonal"></div>
+                            </div>
+                            <div class="review-item">
+                                <h4>Travel Details</h4>
+                                <div id="reviewTravel"></div>
+                            </div>
+                            <div class="review-item">
+                                <h4>Documents</h4>
+                                <div id="reviewDocuments"></div>
+                            </div>
+                        </div>
+                        <div class="terms-section">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span>I agree to the terms and conditions</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" id="prevBtn" onclick="changeStep(-1)">Previous</button>
+                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="changeStep(1)">Next</button>
+                        <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="track" class="track-section">
+            <div class="container">
+                <h2>Track Your Application</h2>
+                <div class="track-form">
+                    <div class="form-group">
+                        <label for="applicationId">Application ID</label>
+                        <input type="text" id="applicationId" placeholder="Enter your application ID">
+                    </div>
+                    <button class="btn btn-primary" onclick="trackApplication()">Track Status</button>
+                </div>
+                <div id="trackResult" class="track-result" style="display: none;">
+                    <div class="status-card">
+                        <h3>Application Status</h3>
+                        <div class="status-info">
+                            <p><strong>Application ID:</strong> <span id="statusId"></span></p>
+                            <p><strong>Status:</strong> <span id="statusText"></span></p>
+                            <p><strong>Submitted Date:</strong> <span id="statusDate"></span></p>
+                            <p><strong>Estimated Processing:</strong> <span id="statusProcessing"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>VisaPortal</h4>
+                    <p>Your trusted partner for visa applications worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#apply">Apply</a></li>
+                        <li><a href="#track">Track</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@visaportal.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VisaPortal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
